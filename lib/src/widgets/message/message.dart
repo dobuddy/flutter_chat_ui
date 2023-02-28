@@ -314,7 +314,7 @@ class Message extends StatelessWidget {
               message: message,
               nextMessageInGroup: roundBorder,
             )
-          : enlargeEmojis && hideBackgroundOnEmojiMessages
+          : (enlargeEmojis && hideBackgroundOnEmojiMessages) || (message.metadata?['hasBubble'] == false)
               ? _messageBuilder()
               : Container(
                   decoration: BoxDecoration(
