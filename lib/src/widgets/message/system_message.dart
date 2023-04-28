@@ -6,21 +6,17 @@ import '../state/inherited_chat_theme.dart';
 class SystemMessage extends StatelessWidget {
   const SystemMessage({
     super.key,
-    required this.message,
+    required this.systemWidget,
   });
 
   /// System message.
-  final String message;
+  final Widget systemWidget;
 
   @override
   Widget build(BuildContext context) => Container(
         alignment: Alignment.center,
         margin: InheritedChatTheme.of(context).theme.systemMessageTheme.margin,
-        child: Text(
-          message,
-          style:
-              InheritedChatTheme.of(context).theme.systemMessageTheme.textStyle,
-        ),
+        child: systemWidget,
       );
 }
 

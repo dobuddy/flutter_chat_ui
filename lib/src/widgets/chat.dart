@@ -546,8 +546,8 @@ class ChatState extends State<Chat> {
       final Widget messageWidget;
 
       if (message is types.SystemMessage) {
-        messageWidget = widget.systemMessageBuilder?.call(message) ??
-            SystemMessage(message: message.text);
+        messageWidget = message.metadata!['widget'] as Widget? ??
+            SystemMessage(systemWidget: Text(message.text));
       } else {
         final messageWidth =
             widget.showUserAvatars && message.author.id != widget.user.id
