@@ -3,7 +3,7 @@ description: >
   Actively maintained, community-driven chat UI implementation with an
   optional Firebase BaaS.
 version: 1.6.7
-homepage: https://flyer.chat
+homepage: https://github.com/dobuddy/flutter_chat_ui
 repository: https://github.com/dobuddy/flutter_chat_ui
 
 environment:
